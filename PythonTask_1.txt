@@ -1,0 +1,117 @@
+# 1. Create three variables in a single line and assign
+# value of them in such a manner that each one of
+# them belongs to a different data type.
+'''
+a, b, c = 1, 1.2, "python"
+print(a)
+print(b)
+print(c)'''
+
+# 2. Create a variable of type complex and swap it with
+# another variable of type integer.
+"""
+a = 1 + 5j
+b = 10
+
+print('value of a before swap: ', a)
+print('value of b before swap: ', b)
+
+a, b = b, a
+
+print('value of a after swap: ', a)
+print('value of b after swap: ', b) """
+
+
+# 3. Swap two numbers using a third variable and do the
+# same task without using any third variable.
+'''
+x = 7
+y = 9
+print('Value of x before swap ', x)
+print('Value of y before swap ', y)
+temp = x
+x = y
+y = temp
+print('Value of x after swap ',x)
+print('Value of y after swap ',y) '''
+
+'''x = 7
+y = 9
+print('Value of x before swap ', x)
+print('Value of y before swap ', y)
+x,y = y,x
+print('Value of x after swap ',x)
+print('Value of y after swap ',y)'''
+
+# 4. Write a program that takes input from the user and print it
+# using both Python 2.x and Python 3.x version.
+'''
+print(input('Enter a number: '))
+print(input('Enter another number: '))'''
+
+# 5. Write a program to complete the task given below:
+# Ask users to enter any 2 numbers in between 1-10, add the two numbers
+# and keep the sum in another variable called z. Add 30 to z and store
+# the output in variable result and print result as the final output.
+'''
+# Ask for first number in between 1-10
+first_number = int(input("Enter a number between 1 - 10: "))
+
+# Ask for another number in between 1 - 10
+second_number = int(input("Enter another number between 1 - 10: "))
+
+# Sum of above numbers
+
+z = first_number + second_number
+
+# Add 30 to z
+final = 30 + z
+
+print("The final output is ", final)'''
+
+
+# Write a program to check the data type of the entered values.
+'''
+a = input("Enter any value to check the type: ")
+b = type(eval(a))
+print("The data type of the input value is ", b) '''
+
+# 7. Create a Variables using formats such as Upper CamelCase,
+# Lower CamelCase, SnakeCase, and UPPERCASE.
+'''
+# Upper Camelcase
+ExampleOfUpperCamelcase = 50
+# Lower Calmelcase
+exampleOfLowerCamelcase = 40
+# SnakeCase
+example_of_snakecase = 30
+# UPPERCASE
+EXAMPLEOFUPPERCASE = 20
+
+print(ExampleOfUpperCamelcase)
+print(exampleOfLowerCamelcase)
+print(example_of_snakecase)
+print(EXAMPLEOFUPPERCASE) '''
+
+# 8. If one data type value is assigned to 'a' and then a different
+# data type value is assigned to 'a' again. Will it change the
+# value. If yes then why?
+''' If one data type value is assigned to 'a' variable and then a
+different data type value is assigned to 'a' again, the value of 'a'
+will change. A variable is a name that represents a value stores in the
+computer' memory. They are known as variable because they can
+reference different values while a program is running. When a 
+value is assigned to a variable, it will reference that value until
+it it is assigned a different value.'''
+
+
+
+
+
+
+
+
+
+
+
+
