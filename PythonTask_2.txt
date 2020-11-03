@@ -1,0 +1,269 @@
+# 1.
+
+"""
+x = int(input('Enter a number: '))
+
+if (x % 3) == 0 and (x % 5) == 0:
+    print('Consultadd-Python Training')
+elif x % 5 == 0:
+    print('Python Training')
+elif x % 3 == 0:
+    print('Consultadd')
+else:
+    print('Please pick another number.')"""
+
+# 2.
+"""
+print('1-> Addition,2-> Subtraction,3-> Division,4-> Multiplication,5-> Average')
+choice = int(input('Enter a number from above choices: '))
+
+num1 = int(input('Enter a number for calculation: '))
+num2 = int(input('Enter a number for calculation: '))
+
+if choice == 1:
+    add = num1 + num2
+    print(add)
+
+    if add < 0:
+        print('Negative')
+elif choice == 2:
+    sub = num1 - num2
+    print(sub)
+
+    if sub < 0:
+        print('Negative')
+elif choice == 3:
+    print('First number given will be numerator.')
+    div = num1 / num2
+    print(div)
+
+    if div < 0:
+        print('Negative')
+elif choice == 4:
+    mul = num1 * num2
+    print(mul)
+
+    if mul < 0:
+        print('Negative')
+
+elif choice == 5:
+    first = int(input('Enter a number for calculation: '))
+    second = int(input('Enter a number for calculation: '))
+
+    average = (num1 + num2 + first + second) / 4
+
+    print(average)
+
+    if average < 0:
+        print('Negative')"""
+
+# 3.
+"""
+a = 10
+b = 20
+c = 30
+
+avg = (a + b + c)/3
+print("avg = ", avg)
+
+if avg > a and avg > b and avg > c:
+    print('avg is higher than a, b, c.')
+
+elif avg > a and avg > b:
+    print('avg is higher than a, b.')
+
+elif avg > a and avg > c:
+    print('avg is higher than a, c.')
+
+elif avg > b and avg > c:
+    print('avg is higher than b, c.')
+
+elif avg > a:
+    print('avg is just higher than a.')
+
+elif avg > b:
+    print('avg is just higher than b.')
+
+elif avg > c:
+    print('avg is just higher than c.') """
+
+
+# 4.
+"""
+while True:
+    value = int(input('Enter a number: '))
+
+    if value < 0:
+        print("It's over.")
+        break
+
+    if value > 0:
+        print("Good Going.")
+        continue """
+
+# 5.
+"""
+sum1 = 0
+for i in range(2000, 3201):
+    if i % 7 == 0 and i % 5 != 0:
+        sum1 += i
+        print(i)"""
+
+# 6.
+"""
+x = [1, 2, 3]
+for i in x:
+    print(i)"""
+# OUTPUT-> 1
+#          2
+#          3
+"""
+i = 0
+while i < 5:
+    print(i)
+    i += 1
+    if i == 3:
+        break
+    else:
+        print('error')"""
+# OUTPUT ->  0
+#            error
+#            1
+#            error
+#            2
+
+"""
+count = 0
+while True:
+    print(count)
+    count += 1
+    if count >= 5:
+        break """
+# OUTPUT -> 0
+#           1
+#           2
+#           3
+#           4
+
+# 7.
+"""
+for i in range(0, 6):
+
+    if i == 3 or i == 6:
+        continue
+    print(i) """
+
+# 8.
+"""
+word = str(input('Give a word: '))
+d = l = 0
+
+for i in word:
+    if i.isdigit():
+        d = d + 1
+    elif i.isalpha():
+        l = l + 1
+    else:
+        pass
+print('Letters', l)
+print('Digits', d) """
+
+# 9, 11
+"""
+number = 7
+answer = "no"
+
+while True:
+    guess = int(input('Guess the lucky number: '))
+    ans = input("Enter YES to continue and NO to stop: ")
+
+    if guess == number or ans == answer:
+        break
+    if guess != number or ans != answer:
+        continue
+
+"""
+
+"""
+# 10.
+
+counter = 1
+number = 7
+#answer = "yes"
+
+while counter <= 5:
+    guess = int(input('Guess the lucky number: '))
+    #answer = str(input("Enter yes to continue and no to stop: "))
+
+    print("Type in the", counter, "number")
+    counter = counter + 1
+
+    if guess == number:
+        print('Good guess!')
+
+    elif guess != number:
+        print('Try again!')
+        
+print('Game Over')"""
+
+# 11.
+"""
+counter = 1
+number = 7
+# answer = "yes"
+
+while counter <= 5:
+    guess = int(input('Guess the lucky number: '))
+    # answer = str(input("Enter yes to continue and no to stop: "))
+
+    print("Type in the", counter, "number")
+    counter = counter + 1
+
+    if counter == 6:
+        print('Sorry, but that was not very successful.')
+
+    if guess == number:
+        print('Good guess!')
+        break
+
+    if guess != number:
+        continue """
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
