@@ -47,17 +47,24 @@ print(unique([3,4,5,3,5,4,3,2,2])) """
 # 4. Write a program that accepts a hyphen-separated sequence of words as input and prints the words
 # in a hyphen-separated sequence after sorting them alphabetically.
 items = input("Provide a hyphen-separated sequence of word: ")
-words = [n for n in items.split('-')]
-words.sort()
-print('-'.join(words)) """
+l = items.split('-')
+l1 =[]
+for word in l:
+    l1.append(word)
+    l1.sort()
+
+print('-'.join(l1))"""
 
 """
 # 5. Write a program that accepts a sequence of lines as input and prints
 # the lines after making all characters in the sentence capitalized.
 
 sentence = input("Enter a sentence: ")
-capital = [word.upper() for word in sentence.split()]
-print(' '.join(capital)) """
+l = sentence.split(' ')
+l1 = []
+for word in l:
+    l1.append(word.upper())
+print(' '.join(l1))"""
 
 """
 # 6. Define a function that can receive two integral numbers in string form and compute their sum and
