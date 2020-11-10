@@ -1,0 +1,226 @@
+"""# 1. Write a program to reverse a string.
+a = "3456Starlight"
+b = a[::-1]
+print(b)
+# thgilratS6543 """
+
+"""
+# 2.  Write a function that accepts a string and prints the number of uppercase letters and lowercase
+# letters.
+
+def letter():
+
+    word = "mJInEuNBiNRkYsNHa"
+    uppercase = []
+    lowercase = []
+    for i in word:
+        if i.isupper():
+            uppercase.append(i)
+        elif i.islower():
+            lowercase.append(i)
+
+    lenUpper = len(uppercase)
+
+    lenLower = len(lowercase)
+
+    print("No. of Uppercase characters: ", lenUpper)
+    print("No. of Lowercase characters: ", lenLower)
+
+letter()"""
+
+"""
+# 3. Create a function that takes a list and returns a
+# new list with unique elements of the first list.
+
+
+def unique(nums):
+    l1 = []
+    for i in nums:
+        if i not in l1:
+            l1.append(i)
+    return l1
+
+
+print(unique([3,4,5,3,5,4,3,2,2])) """
+
+"""
+# 4. Write a program that accepts a hyphen-separated sequence of words as input and prints the words
+# in a hyphen-separated sequence after sorting them alphabetically.
+items = input("Provide a hyphen-separated sequence of word: ")
+words = [n for n in items.split('-')]
+words.sort()
+print('-'.join(words)) """
+
+"""
+# 5. Write a program that accepts a sequence of lines as input and prints
+# the lines after making all characters in the sentence capitalized.
+
+sentence = input("Enter a sentence: ")
+capital = [word.upper() for word in sentence.split()]
+print(' '.join(capital)) """
+
+"""
+# 6. Define a function that can receive two integral numbers in string form and compute their sum and
+# print it in the console.
+
+
+def total(a, b):
+
+    c = int(a) + int(b)
+
+    return c
+
+num1 = '34'
+num2 = '2'
+
+sum = total(num1, num2)
+
+print("Total = ", sum)"""
+
+"""
+# 7. Define a function that can accept two strings as input and print the string with the maximum length
+# in the console. If two strings have the same length, then the function should print both the strings line
+# by line.
+
+def lines(a,b):
+    if len(a) > len(b):
+        print(a)
+    elif len(b) > len(a):
+        print(b)
+    elif len(a) == len(b):
+        print(a)
+        print(b)
+    return
+
+l1 = str(input("Enter a word: "))
+l2 = str(input("Enter another word: "))
+
+lines(l1,l2) """
+
+"""
+# 8. Define a function which can generate and print a tuple where the values are square of numbers
+# between 1 and 20 (both 1 and 20 included).
+
+
+def squares():
+    s = list()
+    for i in range(1, 21):
+        s.append(i**2)
+        t = tuple(s)
+    print(t)
+
+
+squares()"""
+
+"""
+# 9. Write a function called showNumbers that takes a parameter called limit. It should print all the
+# numbers between 0 and limit with a label to identify the even and odd numbers.
+
+limit = int(input('Enter a number: '))
+def showNumbers(limit):
+    for i in range(0, limit +1):
+        if i%2 == 0:
+            print(i, "EVEN")
+        elif i%2 != 0:
+            print(i, "ODD")
+
+showNumbers(limit)"""
+
+"""
+# 10. Write a program which uses filter() to make a list whose elements are even numbers between 1
+# and 20 (both included).
+
+l = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+
+even = lambda i: i % 2 == 0
+
+l1 = list(filter(even, l))
+print(l1)"""
+
+"""
+# 11. Write a program which uses map() and filter() to make a list whose elements are squares of even
+# numbers in [1,2,3,4,5,6,7,8,9,10].
+
+l = [1,2,3,4,5,6,7,8,9,10]
+
+r=list(map(lambda n:n*n,l))
+fil = list(filter( lambda i:i %2==0,r))
+print(fil)"""
+
+"""
+# 12. Write a function to compute 5/0 and use try/except to catch the exceptions.
+
+def div():
+    return 5/0
+
+try:
+    div()
+except ZeroDivisionError as e:
+    print('Cannot divide a number by zero.')
+
+except:
+    print('There is another error.') """
+
+"""
+# 13. Flatten the list [1,2,3,4,5,6,7] into 1234567 using reduce().
+from functools import reduce
+
+l = [1,2,3,4,5,6,7]
+
+res = reduce(lambda x,y: x + str(y), l, '')
+print(res)"""
+
+"""
+# 14. Write a program in Python to find the values which are not divisible by 3 but are a multiple of 7.
+# Make sure to use only higher order functions.
+
+s= list(filter(lambda x: x%3!=0 and x%7==0,range(100)))
+print(s) """
+
+# 15. Write a program in Python to multiply the elements of a list by itself using a traditional function
+# and pass the function to map() to complete the operation.
+"""
+# Traditional function
+def multiply():
+    s = list()
+    for i in range(1, 10):
+        s.append(i*i)
+        l = list(s)
+    print(l)
+
+multiply()
+
+# map function
+
+res = list(map(lambda x: x*x, range(1,10)))
+print(res)"""
+
+# 16. What is the output of the following codes:
+"""
+# i.
+def foo():
+    try:
+        return 1
+    finally:
+        return 2
+k = foo()
+print(k)
+
+# Answer is 2 
+
+def a():
+    try:
+        f(x, 4)
+    finally:
+        print('after f')
+        print('after f?')
+a()
+
+# Answer: NameError: name 'f' is not defined
+          # after f
+          # after f? """
+
+
+
+
+

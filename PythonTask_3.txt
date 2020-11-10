@@ -1,0 +1,191 @@
+# 1. Create a list of 10 elements of four different data types
+# like int, string, complex and float.
+
+#a = [5, 6,"Cat", "Dog", "4 + 9k", "6 + 3a", "7 + 4x", 8.3, 3.7, 2.0]
+
+
+# 2. Create a list of size 5 and execute the slicing structure
+"""
+l = [5, 8, 6, "Apple", 3.0]
+
+# Gives the element from start index number to stop index number.
+print(l[1:3])
+# [8, 6] 
+
+l[1:2] = [4, 9] # Changes the elements of the given index numbers.
+print(l)
+#[5, 4, 9, 6, 'Apple', 3.0] 
+
+# This slice contains the elements from index 0 up to 3
+print(l[:3])
+[5, 8, 6] 
+
+
+# This slice contains the elements from index 3 to last index
+print(l[3:]) 
+#['Apple', 3.0]
+
+# This slice will give the copy of the entire list
+print(l[:])
+#[5, 8, 6, 'Apple', 3.0]
+
+# This slice gives the elements in interval of 2.
+print(l[0::2])
+# [5, 6, 3.0] 
+
+# This slice will give the reverse of the original
+print(l[::-1])
+# [3.0, 'Apple', 6, 8, 5]
+
+
+# This slice will give the elements from index 1 to 4 in the
+# interval of 2
+print(l[1:4:2])
+#[8, 'Apple'] 
+
+# This slice will give the elements from index -3 (from -2 to 0)
+print(l[:-3])
+# [5, 8] """
+
+
+# 3. Write a program to get the sum and multiply of all the items in a given list.
+"""
+# To get the sum of all the items in a given list:
+def main():
+    # Create a list
+    l = [1,2,3,5,6,7]
+
+    # create a variable
+    sum = 0
+
+    # To calculate the sum of the items
+    for value in l:
+        sum += value
+
+    # Printing total
+    print('The sum of the items is', sum)
+
+# Call the main function.
+main() """
+
+"""
+# To multiply the items in a given list
+def main():
+    # Create a list
+    l = [1,2,3,5,6,7]
+
+    # create a variable
+    multi = 1
+
+    # To calculate the sum of the items
+    for value in l:
+        multi =  multi * value
+
+    # Printing total
+    print('The result of mutiplying all the items is', multi)
+
+# Call the main function.
+main() """
+
+"""
+# 4. Find the largest and smallest number from a given list.
+l = [2, 5, 8, 10, 71, 82, 4, 7, 3, 93]
+print(max(l))
+print(min(l))
+# 93 -> max
+# 2 -> min
+"""
+"""
+# 5. Create a new list which contains the specified numbers after removing the even numbers from a
+# predefined list.
+l = [5, 4, 8, 9, 3, 2, 56, 43, 68, 34, 95, 33, 12]
+print('Original list', l)
+for i in l:
+    if i % 2 == 0:
+        l.remove(i)
+print('The list after removing the even numbers: ', l)
+#Original list [5, 4, 8, 9, 3, 2, 56, 43, 68, 34, 95, 33, 12]
+#The list after removing the even numbers:  [5, 8, 9, 3, 56, 43, 34, 95, 33]"""
+
+"""
+# 6. Create a list of elements such that it contains the squares of the first and last 5 elements between
+# 1 and30 (both included).
+l = []
+for i in range(1,30):
+    l.append(i**2)
+print(l[:5])
+print(l[-5:])"""
+
+"""
+# 7. Write a program to replace the last element in a list with another list.
+l = [9,7,6,4,2,8]
+m = 10,30,40,20
+l[4:]= m
+print(l)
+#[9, 7, 6, 4, 10, 30, 40, 20]"""
+
+"""
+# 8. Create a new dictionary by concatenating the following two dictionaries:
+x = {2 : 40, 5 : 25}
+y = {4 : 32, 7 : 56}
+x.update({4 : 32, 7 : 56})
+print(x)
+# {2: 40, 5: 25, 4: 32, 7: 56}"""
+
+# 9. Create a dictionary that contain numbers in the form(x:x*x) where x takes all the values between 1
+# and n(both 1 and n included).
+"""
+n = 7
+d = dict()
+for x in range(1, n + 1):
+    d[x]=x*x
+print(d)
+#{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49}"""
+"""
+# 10. Write a program which accepts a sequence of comma-separated numbers from console and
+# generates a list and a tuple which contains every number in the form of string.
+
+num = input("Give a sequence of comma-separated numbers: ")
+l = num.split(",")
+t = tuple(l)
+print(l, t)"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
