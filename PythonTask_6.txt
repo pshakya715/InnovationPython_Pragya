@@ -1,0 +1,66 @@
+# 1. Write a program in Python to find out the character in a string which is uppercase using list
+# comprehension.
+
+s = str(input('Please enter a sentence: '))
+res = [char for char in s if char.isupper()]
+print('Uppercase; ', str(res))
+
+
+# 2. Write a program to construct a dictionary from the two lists containing the names of students and
+# their corresponding subjects. The dictionary should map the students with their respective subjects.
+# Let’s see how to do this using for loops and dictionary comprehension.
+
+students = ['Smit', 'Jaya', 'Rayyan']
+subjects = ['CSE', 'Networking', 'Operating System']
+
+students = ['Smit', 'Jaya', 'Rayyan']
+subjects = ['CSE', 'Networking', 'Operating System']
+
+res = {}
+for key, value in zip(students, subjects):
+    res[key] = value
+
+print("Dictionary: " + str(res))
+
+
+# 3. Learn More about Yield, next and Generators
+--> Yield:
+Yield is a keyword thst is used to return from a function without destroying the states of its 
+local variable and when the function is called, the executionb starts from the last yield 
+statement.THe yield keyword is used to create a generator, instead of retrn in a function.
+
+Next --> the next() function returns the next item in an iterator. It can be the alternative 
+to iteration in case length is nit specified and inbuilt functionis not allowed to use. next()
+is the utility function for printing the components of container of iter type. Its usage is 
+when size of container is not known or we need to give a prompt when the list/iterator has exhausted.
+
+A Generator is a concise way to construct a new iterable object.Generators return a sequence of
+multiple results lazily, pausing after each one until the next one is requested. Generators are 
+iterators, a kind of iterablethat can only iterate iver ince. Generators do not store all the 
+values in memory, they generate the values on the fly.
+
+
+# 4. Write a program in Python using generators to reverse the string.
+# Input String = “Consultadd Training”
+
+def reverse(my_str):
+    new = [i for i in my_str]
+    yield new[::-1]
+
+for char in reverse(str(input("Enter string: "))):
+    print(''.join(char))
+
+
+# 5. Write an example on decorators.
+
+--> def div(f):
+    def inner(a,b):
+        print("Dividing ", a, "and ", b)
+        if b == 0:
+            print("Cannot divide.")
+            return
+        return f(a, b)
+    return inner
+
+   def divide(a, b):
+   print(a/b)
