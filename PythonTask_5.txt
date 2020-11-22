@@ -1,0 +1,106 @@
+
+# 1.  Write a program in Python to allow the error of syntax to be handled using exception handling.
+
+try:
+    eval('c===y')
+except SyntaxError:
+    print('There is Syntax Error.')
+
+
+# 2. Write a program in Python to allow the user to open a file by using the argv module. If the
+# entered name is incorrect throw an exception and ask them to enter the name again. Make sure
+# to use read only mode.
+
+"""
+fh = open('data1.txt','a')
+fh.write('\nI added another line to it.')
+fh.close()"""
+
+from sys import argv
+
+nop, fn = argv
+print('name of program: ', nop)
+print('name of file: ',fn)
+try:
+    while True:
+        fh = open(fn, 'r')
+        c = fh.readline()
+        print(c)
+        fh.close()
+        break
+except:
+    print('Please enter the name again.')
+
+
+# 3. Write a program to handle an error if the user entered a number more than four digits it should
+# return “The length is too short/long !!! Please provide only four digits”
+
+x = str(input('Please enter a number: '))
+try:
+    if len(x) != 4:
+        raise Exception
+except Exception as e:
+    print("The length is too short/long !!! Please provide only four digits")
+
+
+
+# 4. Create a login page backend to ask users to enter the username and password. Make sure to
+# ask for a Re-Type Password and if the password is incorrect give chance to enter it again but it
+# should not be more than 3 times.
+
+count = 0
+while count < 3:
+    user_name = input('Please enter your user name: ')
+    password = input('PLease enter your password: ')
+
+    if user_name != 'Ortsa2016' or password != 'Ahora16':
+        print('Wrong user name or password. Please try again.')
+
+    else:
+        print('Welcome to Astro World')
+        break
+    count += 1
+
+
+5. Go through the link provided below to understand finally and raise concept:
+
+
+--> finally: The finally clause is optional that can be attached with the try statement. It defines a
+	     block of code to run when the try...except...else block is final. The finally block is 
+             executed no matter if the try block raises error or not. This can be useful to close objects
+             and clean up resources.
+
+--> raise : Raise clause allows to throw an exception at any time. The Python interpreter raises
+            an exception each time it dects an error in en expression or statement. The exceptions are 
+            raised when erros occur at runtime. Exception can also be raised manually by using the
+            raise keyword. Values can be passed optionally to the exception to clarify why that 
+            exception was raised.
+
+
+# 6. Read doc.txt file using Python File handling concept and return only the even length string from
+# the file. Consider the content of doc.txt as given below:
+"""
+fh = open('doc.txt','w')
+fh.write('Hello I am a file'
+         '\n Where you need to return the data string'
+         '\n Which is of even length'
+         '\n Make sure you return the content in The same link as it is present')
+fh.close()
+"""
+my_file = open('doc.txt', 'r')
+text = my_file.read()
+
+lines = text.split('\n')
+words = []
+even_words = []
+
+for each in lines:
+    words += each.split(' ')
+
+for each in words:
+    if len(each)%2 == 0:
+        even_words.append(each)
+
+print(even_words)
+
+
