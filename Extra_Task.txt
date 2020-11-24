@@ -1,0 +1,130 @@
+# 1. Create a list of given structure and get the Access list as provided below:
+# x=[100,200,300,400,500,[1,2,3,4,5,[10,20,30,40,50],6,7,8,9],600,700,800]
+# Access list: [1, 2, 3, 4]
+# Access list: [600, 700]
+# Access list: [100, 300, 500, 600, 800]
+# Access list: [[800, 700, 600, [1, 2, 3, 4, 5, [10, 20, 30, 40, 50], 6, 7, 8, 9], 500, 400, 300, 200, 100]]
+# Access list: [10]
+# Access list: [ ]
+
+x=[100,200,300,400,500,[1,2,3,4,5,[10,20,30,40,50],6,7,8,9],600,700,800]
+
+print("Access list: ", x[5][:4])
+
+print("Access list: ", x[-3:-1])
+
+y = x[0::2]
+print("Access list: ", y)
+
+print("Access list: ", x[::-1])
+
+print("Access list: ", x[5][5][:1])
+
+del x[::]
+print("Access list: ", x)
+
+
+
+# 2. Create a list of thousand numbers using range and xrange and see the difference between each
+# other.
+"""
+r = range(1, 1000, 1)
+l = list(r)
+print(l)"""
+
+r1 = xrange(1, 1000, 1) 
+for it in r1:
+    print(it)
+"""
+Traceback (most recent call last):
+  File "C:/Users/pragy/PycharmProjects/pythonProject/PythonIMP/Extra_Task.py", line 35, in <module>
+    r1 = xrange(1, 1000, 1)
+NameError: name 'xrange' is not defined"""
+
+
+
+
+"""
+# 3. How Tuple is beneficial as compared to the list?
+-> A tuple is an immutable sequence, which means that its contents cannot be changed. Tuple is 
+beneficial as compared to list because of performance. Processing tuple is faster than 
+processing a list, so tuples are good choices when processing lots of data, and that data
+will not be modified. Since tuple is immutable, the data can be stored and rest assured that it
+will not be modified (accidentally or otherwise) by any code in the program. """
+
+
+
+# 4. Write a program in Python to iterate through the list of numbers in the range of 1,100 and print
+# the number which is divisible by 3 and is a multiple of 2.
+
+l = []
+for i in range(1, 1000):
+    if (i%3==0) and (i%3==0):
+        l.append(str(i))
+print(','.join(l))
+
+
+# 5. Write a program in Python to reverse a string and print only the vowel alphabet if it exists in the
+# string with their index.
+
+
+word = input("Enter a string: ")
+l = word.split(' ')
+l1 = []
+for i in word:
+    l1.append(i)
+    l2 = l1[::-1]
+    v = []
+    for j in l2:
+        if(j=='a'or j=='e'or j=='i'or j=='o'or j=='u'):
+            v.append(j)
+print(v)
+
+
+# 6. Write a program in Python to iterate through the string “hello my name is abcde” and print the
+# string which is having an even length.
+
+sentence = 'hello my name is abcde'
+word = sentence.split(' ')
+print(word)
+l = []
+for i in word:
+    if len(i)%2 == 0:
+        l.append(i)
+print(l)
+
+
+# 7. Write a program in python to print the pair of numbers whose sum is equal to the result
+# number that is let's say 8.
+# x=[1,2,3,4,5,6,7,8,9,-1]
+
+x=[1,2,3,4,5,6,7,8,9,-1]
+n = len(x)
+for i in range(0, n):
+    for j in range(i+1, n):
+        if i + j == 8:
+            print("(", i, ", ", j, ")", sep="")
+
+
+# 8
+
+
+# 9
+
+# 10. Generate and print another tuple whose values are even numbers in the given tuple
+# (1,2,3,4,5,6,7,8,9,10).
+l = []
+given_tuple = (1,2,3,4,5,6,7,8,9,10)
+
+for i in given_tuple:
+    if i%2 == 0:
+        l.append(i)
+
+print(tuple(l))
+
+
+
+
+
+
+
