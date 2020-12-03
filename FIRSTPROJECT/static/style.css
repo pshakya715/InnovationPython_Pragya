@@ -1,0 +1,11 @@
+body {
+    background: white url("images/python.jpg") no-repeat;
+}
+
+h2 {
+    font-size : 16pt;
+    font-style : italic;
+    text-align : center;
+    color : #FF0000;
+
+}
